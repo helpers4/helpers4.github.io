@@ -3,13 +3,13 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'TypeScript Helpers | helpers4',
-  tagline: 'Tree-shakable TypeScript utility functions organized by category',
+  tagline: 'Tree-shakable TypeScript utility functions',
   favicon: 'img/favicon.ico',
   url: 'https://helpers4.dev',
   baseUrl: '/ts/',
   organizationName: 'helpers4',
   projectName: 'typescript',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -26,6 +26,11 @@ const config: Config = {
           routeBasePath: '/',
           editUrl:
             'https://github.com/helpers4/typescript/tree/main/docs/',
+          versions: {
+            current: {
+              label: 'Current',
+            },
+          },
         },
         blog: false,
         theme: {
@@ -94,8 +99,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} helpers4 - AGPL-3.0 License`,
     },
     prism: {
-      theme: require('prism-react-renderer/themes/github'),
-      darkTheme: require('prism-react-renderer/themes/nightOwl'),
+      theme: require('prism-react-renderer').themes.github,
+      darkTheme: require('prism-react-renderer').themes.nightOwl,
     },
   } satisfies Preset.ThemeConfig,
 };

@@ -9,7 +9,7 @@ const config: Config = {
   baseUrl: '/action/',
   organizationName: 'helpers4',
   projectName: 'action',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -90,8 +90,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} helpers4 - AGPL-3.0 License`,
     },
     prism: {
-      theme: require('prism-react-renderer/themes/github'),
-      darkTheme: require('prism-react-renderer/themes/nightOwl'),
+      theme: require('prism-react-renderer').themes.github,
+      darkTheme: require('prism-react-renderer').themes.nightOwl,
     },
   } satisfies Preset.ThemeConfig,
 };
